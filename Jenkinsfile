@@ -67,13 +67,13 @@ pipeline {
         }
 
    stage("End to End Tests") {
-            when {
-                branch 'master'
-            }
-            agent any
-            steps {
-                sh "chmod +x ui-tests.sh"
-                sh "./ui-tests.sh"
+                when {
+                    branch 'master'
+                }
+                agent any
+                steps {
+                    sh "chmod +x ui-tests.sh"
+                    sh "./ui-tests.sh"
             }
         }
 
