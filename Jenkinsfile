@@ -20,7 +20,7 @@ pipeline {
                 junit 'target/surefire-reports/TEST-*.xml'
             }
         }
-        
+                
         stage('Create and Publish Docker Image'){
             agent any
             steps{
